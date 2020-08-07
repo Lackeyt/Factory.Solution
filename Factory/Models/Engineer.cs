@@ -7,10 +7,10 @@ namespace Factory.Models
   {
     public Engineer()
     {
-      this.Machines = new HashSet<EngineerMachine>();
+      this.Join = new HashSet<EngineerMachine>();
     }
     public int EngineerId {get;set;}
     public string Name {get;set;}
-    public virtual ICollection<EngineerMachine> Machines {get;set;}
+    public virtual ICollection<EngineerMachine> Join {get;set;}
   }
 }
