@@ -17,6 +17,6 @@
       @Html.EditorFor(model=>model.Name, new{@class="form-control", @required=true})
     </div>
     <input type="submit" value="Edit Engineer" class="btn btn-secondary">
-    <input type="button" value="Cancel" onclick="location.href='@Url.Action("Index", "Engineers")';" class="btn btn-secondary"/>
+    <input type="button" value="Cancel" onclick="location.href='@Url.Action("Details", "Engineers", new {id=Model.EngineerId})';" class="btn btn-secondary"/>
   }
 </div>

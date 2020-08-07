@@ -18,7 +18,8 @@
 
     @Html.Label("Select Machine")
     @Html.DropDownList("MachineId", null, new {@class = "form-control"})
-
+    <br>
     <input type="submit" value="Save" class="btn btn-primary"/>
+    <input type="button" value="Cancel" onclick="location.href='@Url.Action("Details", "Engineers", new {id=Model.EngineerId})';" class="btn btn-secondary"/>
   }
 </div>
