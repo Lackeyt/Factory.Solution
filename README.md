@@ -61,7 +61,8 @@ CREATE TABLE `engineermachine` (
 
 ## Known Bugs
 
-* Front end error handling for null values submitted with forms not in place. (currently just assigned default values in the database)
+* No Error handling for empty values in form (currently saves values as empty strings, which erases ActionLinks)
+* Additional fields not added to Machine and Engineer classes (currently only Name)
 
 ## Support and contact details
 
