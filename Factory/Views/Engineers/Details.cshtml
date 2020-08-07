@@ -12,8 +12,8 @@
 <div class="container">
   <h2>Name: @Model.Name || <input type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "Engineers", new {id = Model.EngineerId})';" class="btn btn-secondary"/></h2>
 
-  <h3>Licensed for the following machines:</h3>
   <hr />
+  <h3>Licensed for the following machines:</h3>
   @if (@Model.Machines.Count == 0)
   {
     <h4>-No Machine Licenses Found-</h4>
