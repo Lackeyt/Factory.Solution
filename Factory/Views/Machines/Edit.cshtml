@@ -12,6 +12,7 @@
 <div class="container">
   @using (Html.BeginForm())
   {
+    @Html.HiddenFor(model=>model.MachineId)
     <div class="form-group">
       <h4>Name</h4>
       @Html.EditorFor(model=>model.Name, new{@class="form-control", @required=true})

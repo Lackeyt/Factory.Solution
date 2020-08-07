@@ -10,7 +10,7 @@
 </h1>
 
 <div class="container">
-  <h2>Name: @Model.Name</h2>
+  <h2>Name: @Model.Name || <input type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "Machines", new {id = Model.MachineId})';" class="btn btn-secondary"/></h2>
 
   <h3>The Following Engineers are Licensed on this Machine:</h3>
   <hr />
