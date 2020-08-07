@@ -10,8 +10,8 @@
   <p>@Html.ActionLink("Machine List", "Index") || @Html.ActionLink("Engineer List", "Index", "Engineers") || @Html.ActionLink("Home", "Index", "Home")</p>
 </h1>
 
-<div class="container">
-  <h2>Name: @Model.Name || <input type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "Machines", new {id = Model.MachineId})';" class="btn btn-secondary"/></h2>
+<div class="container well">
+  <h2>Name: @Model.Name</h2>
   <hr />
 
   <h3>The Following Engineers are Licensed on this Machine:</h3>
@@ -25,10 +25,11 @@
     {
       @using (Html.BeginForm("DeleteEngineer","Machines"))
       {
-        <h4>@Html.ActionLink(@join.Engineer.Name, "Details", "Engineers", new {id=join.EngineerId}) || @Html.Hidden("joinId", @join.EngineerMachineId) <input type="submit" value="Remove" class="btn btn-secondary" /></h4>
+        <h4>@Html.ActionLink(@join.Engineer.Name, "Details", "Engineers", new {id=join.EngineerId}) || @Html.Hidden("joinId", @join.EngineerMachineId) <input type="submit" value="Remove" class="btn btn-primary" /></h4>
       }
     }
   }
   <br>
-  <input type="button" value="Add Engineer" onclick="location.href='@Url.Action("AddEngineer", "Machines", new {id = Model.MachineId})';" class="btn btn-secondary"/>
+  <input type="button" value="Edit Machine" onclick="location.href='@Url.Action("Edit", "Machines", new {id = Model.MachineId})';" class="btn btn-primary"/>
+  <input type="button" value="Add Engineer" onclick="location.href='@Url.Action("AddEngineer", "Machines", new {id = Model.MachineId})';" class="btn btn-primary"/>
 </div>

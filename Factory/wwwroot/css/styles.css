@@ -18,19 +18,16 @@ p{
 }
 
 body{
-  background-color:rgb(169, 170, 255);
+  background-image: url("../assets/images/Program/background.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  height:100%;
 }
 
 .homeCenter{
   text-align: center;
-}
-
-.jumbotron{
-  opacity: .7;
-}
-
-.btn, .btn-secondary{
-  opacity: .7;
 }
 
 a{

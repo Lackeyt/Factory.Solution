@@ -11,7 +11,7 @@
 </h1>
 <hr />
 
-<div class="container">
+<div class="container well">
   <h3>@Model.Name</h3>
   @using (Html.BeginForm())
   {
@@ -21,6 +21,6 @@
     @Html.DropDownList("MachineId", null, new {@class = "form-control"})
     <br>
     <input type="submit" value="Save" class="btn btn-primary"/>
-    <input type="button" value="Cancel" onclick="location.href='@Url.Action("Details", "Engineers", new {id=Model.EngineerId})';" class="btn btn-secondary"/>
+    <input type="button" value="Cancel" onclick="location.href='@Url.Action("Details", "Engineers", new {id=Model.EngineerId})';" class="btn btn-primary"/>
   }
 </div>
