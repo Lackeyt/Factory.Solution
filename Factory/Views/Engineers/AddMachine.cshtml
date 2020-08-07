@@ -4,18 +4,21 @@
 
 @model Factory.Models.Engineer
 
-<h1>Add Machine License</h1>
+<h1 class="jumbotron">
+  Add Machine License
+  <p>@Html.ActionLink("Engineer List", "Index") || @Html.ActionLink("Machine List", "Index", "Machines") || @Html.ActionLink("Home", "Index", "Home")</p>
+</h1>
 <hr />
-<h3>@Model.Name</h3>
 
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.EngineerId)
+<div class="container">
+  <h3>@Model.Name</h3>
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.EngineerId)
 
-  @Html.Label("Select Machine")
-  @Html.DropDownList("MachineId", null, new {@class = "form-control"})
+    @Html.Label("Select Machine")
+    @Html.DropDownList("MachineId", null, new {@class = "form-control"})
 
-  <input type="submit" value="Save" class="btn btn-primary"/>
-}
-
-<p>@Html.ActionLink("Engineer List", "Index") || @Html.ActionLink("Machine List", "Index", "Machines") || @Html.ActionLink("Home", "Index", "Home")</p>
+    <input type="submit" value="Save" class="btn btn-primary"/>
+  }
+</div>
