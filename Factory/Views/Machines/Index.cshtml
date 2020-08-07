@@ -21,6 +21,7 @@
     <li>
       @Html.ActionLink($"{machine.Name}", "Details", new {id = machine.MachineId}) || <input type="button" value="Delete" onclick="location.href='@Url.Action("Delete", "Machines", new {id= machine.MachineId})';" class="btn btn-secondary"/>
     </li>
+    <br>
   }
   <br>
   <input type="button" value="New Machine" onclick="location.href='@Url.Action("Create", "Machines")';" class="btn btn-secondary"/>

@@ -16,3 +16,23 @@ ul{
 p{
   font-size: 2rem;
 }
+
+body{
+  background-color:rgb(169, 170, 255);
+}
+
+.homeCenter{
+  text-align: center;
+}
+
+.jumbotron{
+  opacity: .7;
+}
+
+.btn, .btn-secondary{
+  opacity: .7;
+}
+
+a{
+  color: rgb(35, 35, 255);
+}
