@@ -25,9 +25,9 @@ namespace Factory.Controllers
     public ActionResult Details(int id)
     {
       var thisEngineer = _db.Engineers
-          .Include(engi=>engi.Join)
+          .Include(engineer=>engineer.Join)
           .ThenInclude(join=>join.Machine)
-          .FirstOrDefault(engi=>engi.EngineerId = id);
+          .FirstOrDefault(engineer=>engineer.EngineerId = id);
       return View(thisEngineer);
     }
 
@@ -84,7 +84,7 @@ namespace Factory.Controllers
     public ActionResult AddMachine(Engineer engineer, int MachineId)
     {
       var joinExists = _db.EngineerMachine.FirstOrDefault(join=>join.MachineId = MachineId && join.EngineerId = engineer.EngineerId);
-      if(JoinExists != null)
+      if(joinExists != null)
       {
         return RedirectToAction("Details", new {id = engineer.EngineerId});
       }
