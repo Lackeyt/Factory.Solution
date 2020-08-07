@@ -1,4 +1,4 @@
-namespace SneussFactory.Models
+namespace Factory.Models
 {
   public class EngineerMachine
   {

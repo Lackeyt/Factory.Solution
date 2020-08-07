@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace SneussFactory.Controllers
+namespace Factory.Controllers
 {
-  public class EngineersController : Controller
+  public class MachinesController : Controller
   {
-    private readonly SneussFactoryContext _db;
+    private readonly FactoryContext _db;
 
-    public EngineersController(SneussFactoryContext db)
+    public MachinesController(FactoryContext db)
     {
       _db = db;
     }
@@ -32,7 +32,7 @@ namespace SneussFactory.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Engineer engineer)
+    public ActionResult Create(Machine machine)
     {
 
     }
@@ -43,7 +43,7 @@ namespace SneussFactory.Controllers
     }
 
     [HttpPost]
-    public ActionResult Edit(Engineer engineer)
+    public ActionResult Edit(Machine machine)
     {
 
     }
@@ -59,19 +59,19 @@ namespace SneussFactory.Controllers
 
     }
 
-    public ActionResult AddMachine(int id)
+    public ActionResult AddEngineer(int id)
     {
 
     }
 
     [HttpPost]
-    public ActionResult AddMachine(Engineer engineer, int MachineId)
+    public ActionResult AddEngineer(Machine machine, int EngineerId)
     {
 
     }
 
     [HttpPost]
-    public ActionResult DeleteMachine(int joinId)
+    public ActionResult DeleteEngineer(int joinId)
     {
       
     }

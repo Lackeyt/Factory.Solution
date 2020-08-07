@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace SneussFactory.Models
+namespace Factory.Models
 {
   public class Machine
   {
