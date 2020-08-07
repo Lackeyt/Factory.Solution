@@ -4,7 +4,10 @@
 
 @model Factory.Models.Machine
 
-<h1>Add Engineer Licensed to use this machine</h1>
+<h1>
+  Add Engineer Licensed to use this machine
+  <p>@Html.ActionLink("Machine List", "Index") || @Html.ActionLink("Engineer List", "Index", "Engineers") || @Html.ActionLink("Home", "Index", "Home")</p>
+</h1>
 <hr />
 <h3>@Model.Name</h3>
 
@@ -18,4 +21,4 @@
   <input type="submit" value="Save" class="btn btn-primary"/>
 }
 
-<p>@Html.ActionLink("Machine List", "Index") || @Html.ActionLink("Engineer List", "Index", "Engineers") || @Html.ActionLink("Home", "Index", "Home")</p>
+<p></p>
