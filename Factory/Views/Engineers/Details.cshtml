@@ -22,7 +22,10 @@
   {
     @foreach(var join in Model.Machines)
     {
-      <h4>@Html.ActionLink(@join.Machine.Name, "Details", "Machines", new {id=join.MachineId}) || <input type="button" value="Remove" onclick="location.href='@Url.Action("DeleteMachine", "Engineers", new {joinId= join.EngineerMachineId})';" class="btn btn-secondary"/></h4>
+      @using (Html.BeginForm("DeleteMachine","Engineers"))
+      {
+        <h4>@Html.ActionLink(@join.Machine.Name, "Details", "Machines", new {id=join.MachineId}) || @Html.Hidden("joinId", @join.EngineerMachineId) <input type="submit" value="Remove" class="btn btn-secondary" /></h4>
+      }
     }
   }
   <br>

@@ -99,12 +99,12 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult DeleteMachine(int joinId, int EngineerId)
+    public ActionResult DeleteMachine(int joinId)
     {
       var joinEntry = _db.EngineerMachine.FirstOrDefault(entry=>entry.EngineerMachineId == joinId);
       _db.EngineerMachine.Remove(joinEntry);
       _db.SaveChanges();
-      return RedirectToAction("Details", new {id = EngineerId});
+      return RedirectToAction("Details", new {id = joinEntry.EngineerId});
     }
   }
 }
