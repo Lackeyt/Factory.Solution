@@ -1,3 +1,30 @@
 @{
   Layout = "_Layout";
 }
+
+@model Factory.Models.Machine;
+
+<h1 class="Jumbotron">
+  Machine Details
+  <p>@Html.ActionLink("Machine List", "Index") || @Html.ActionLink("Engineer List", "Index", "Engineers") || @Html.ActionLink("Home", "Index", "Home")</p>
+</h1>
+
+<div class="container">
+  <h2>Name: @Model.Name</h2>
+
+  <h3>The Following Engineers are Licensed on this Machine:</h3>
+  <hr />
+  @if (@Model.Engineers.Count == 0)
+  {
+    <h4>-No Engineers Are Licensed-</h4>
+  }
+  else
+  {
+    @foreach(var join in Model.Engineers)
+    {
+      <h4>@Html.ActionLink(@join.Engineer.Name, "Details", "Engineers", new {id=join.EngineerId}) || <input type="button" value="Remove" onclick="location.href='@Url.Action("DeleteEngineer", "Machines", new {joinId= join.EngineerMachineId})';" class="btn btn-secondary"/></h4>
+    }
+  }
+  <br>
+  <input type="button" value="Add Engineer" onclick="location.href='@Url.Action("AddEngineer", "Machines", new {id = Model.MachineId})';" class="btn btn-secondary"/>
+</div>
