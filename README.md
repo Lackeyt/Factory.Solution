@@ -14,6 +14,17 @@ A SQL database stores Engineer and Machine detials as well as a join table to as
 
 ## Setup/Installation Requirements
 
+##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open via Bash/GitBash:
+
+1. Clone this repository onto your computer:
+    "git clone https://github.com/Lackeyt/Factory.Solution"
+2. Navigate into the "Factory.Solution" directory in Visual Studio Code or preferred text editor:
+3. Open the project by typing "code ." while in the previous directory in your terminal.
+4. Open your computer's terminal and navigate to the directory bearing the name of the program and containing the top level subdirectories and files.
+5. Enter the command "dotnet build" in the terminal and press "Enter".
+6. Enter the command "dotnet watch run" in the terminal and press "Enter".
+
+
 ##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Configue MySQL Workbench Database:
 1. Launch MySQL Workbench
 2. Select "Create a new SQL tab for executing queries"
@@ -49,15 +60,20 @@ CREATE TABLE `engineermachine` (
 )
 ```
 
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open via Bash/GitBash:
-
-1. Clone this repository onto your computer:
-    "git clone https://github.com/Lackeyt/Factory.Solution"
-2. Navigate into the "Factory.Solution" directory in Visual Studio Code or preferred text editor:
-3. Open the project by typing "code ." while in the previous directory in your terminal.
-4. Open your computer's terminal and navigate to the directory bearing the name of the program and containing the top level subdirectories and files.
-5. Enter the command "dotnet build" in the terminal and press "Enter".
-6. Enter the command "dotnet watch run" in the terminal and press "Enter".
+##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Configue MySQL Workbench Database using database import:
+1. In the Administration window of SQL Workbench, select 'Data Import/Restore'
+![DataImportRestore](./Factory/wwwroot/assets/images/readme/DataImportRestore.PNG)
+2. Select 'Import from self-contained file" from the data import window.
+![ImportSelfContainedFile](./Factory/wwwroot/assets/images/readme/ImportSelfContainedFile.PNG)
+3. Navigate to the file path titled tyson_lackey.sql in the Solution file.
+![ImportFilePath](./Factory/wwwroot/assets/images/readme/ImportFilePath.PNG)
+4. Under 'Default Schema to be Imported To', click the "new" button.
+![SelectNew](./Factory/wwwroot/assets/images/readme/SelectNew.PNG)
+5. Name the schema 'tyson_lackey' and click "ok"
+![NameSchema](./Factory/wwwroot/assets/images/readme/NameSchema.PNG)
+6. Click 'Start Import'
+![StartImport](./Factory/wwwroot/assets/images/readme/StartImport.PNG)
+7. reopen the schemas tab, right click and select "refresh all".
 
 ## Known Bugs
 
